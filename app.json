@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "buckit",
+    "slug": "buckit",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "buckit"
+}
