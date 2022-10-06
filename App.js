@@ -3,6 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import TopRow from "./components/Partitions/TopRow";
+import BottomMidRow from "./components/Partitions/BottomMidRow";
+import TopMidRow from "./components/Partitions/TopMidRow";
 
 export default function App() {
   return (<NavigationContainer>
@@ -17,26 +20,18 @@ export default function App() {
 
 const Stack = createNativeStackNavigator();
 
-const buttonClickedHandler = () => {
-  console.log('You have been clicked a button!');
-};
-
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.screen}>
 
-      <View style={styles.topRow}>
-        <Text style={styles.buttonText}>BuckIt</Text>
-      </View>
+      <TopRow/>
 
-      <View style={styles.topMidRow}>
-      </View>
+      <TopMidRow>
+        {/* Need default content here */}
+      </TopMidRow>
       
-      <View style={styles.bottomMidRow}>
-        <TouchableOpacity style={styles.roundButton} onPress={buttonClickedHandler}>
-          <Text style={styles.buttonText}>Check In</Text>
-        </TouchableOpacity>
-      </View>
+      <BottomMidRow/>
+
       <View style={{ padding: 10, flex: 1 }}>
         <View style = {styles.bottomRow}>
           <TouchableOpacity 
@@ -71,34 +66,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  topRow: {
-    flex: 3,
-    backgroundColor: 'gold',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  topMidRow: {
-    flex: 4,
-  },
-  bottomMidRow: {
-    flex: 10,
-  },
   bottomRow: {
     flex: 3,
-  },
-  roundButton: {
-    width: 350,
-    height: 350,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 200,
-    borderColor: 'black',
-    borderWidth: 10,
-    backgroundColor: 'gray',
-  },
-  buttonText: {
-    fontSize: 50,
-    fontWeight: 'bold',
   },
   bottomButtonText: {
     fontSize: 30,
