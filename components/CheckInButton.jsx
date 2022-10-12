@@ -1,9 +1,11 @@
 import {StyleSheet, Text, TouchableOpacity,} from "react-native";
 import React, {useState} from "react";
 
-const [location, setLocation] = useState([0.000, 0.000]);
-
 export default function CheckInButton() {
+    // Hook should be at a top-level in a function component
+    // https://reactjs.org/warnings/invalid-hook-call-warning.html
+    const [location, setLocation] = useState([0.000, 0.000]);
+
     return(
         <TouchableOpacity style={styles.roundButton} onPress={getLocation}>
             <Text style={styles.buttonText}>Check In</Text>
