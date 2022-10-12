@@ -1,5 +1,4 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -83,10 +82,6 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     minWidth: "48%",
     textAlign: "center",
-  },
-  bottomRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
   },
   bottomButtonLabel: {
     fontSize: 12,
