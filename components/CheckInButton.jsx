@@ -6,6 +6,12 @@ export default function CheckInButton() {
     // https://reactjs.org/warnings/invalid-hook-call-warning.html
     const [location, setLocation] = useState([0.000, 0.000]);
 
+    const getLocation = () => {
+        const location = [getRandomInRange(-180, 180, 3), getRandomInRange(-90, 90, 3)];
+        console.log(location);
+        setLocation(location);
+    };
+
     return(
         <TouchableOpacity style={styles.roundButton} onPress={getLocation}>
             <Text style={styles.buttonText}>Check In</Text>
@@ -13,11 +19,7 @@ export default function CheckInButton() {
     );
 }
 
-const getLocation = () => {
-    const location = [getRandomInRange(-180, 180, 3), getRandomInRange(-90, 90, 3)];
-    console.log(location);
-    setLocation(location);
-};
+
 
 function getRandomInRange(from, to, fixed) {
     return (Math.random() * (to - from) + from).toFixed(fixed) * 1;

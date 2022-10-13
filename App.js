@@ -5,14 +5,15 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import TopRow from "./components/Partitions/TopRow";
 import BottomMidRow from "./components/Partitions/BottomMidRow";
 import TopMidRow from "./components/Partitions/TopMidRow";
+import BottomRow from "./components/Partitions/BottomRow";
 
 export default function App() {
   return (<NavigationContainer>
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" 
-      component={HomeScreen} 
-      />
+      <Stack.Screen name="Home" component={HomeScreen}/>
       <Stack.Screen name="Explore" component={ExploreScreen} />
+      <Stack.Screen name="Profile" component={HomeScreen}/>
+      <Stack.Screen name="Settings" component={ExploreScreen} />
     </Stack.Navigator>
   </NavigationContainer>);
 }
@@ -28,23 +29,13 @@ function HomeScreen({ navigation }) {
       <TopMidRow>
         {/* Need default content here */}
       </TopMidRow>
-      
+
       <BottomMidRow/>
 
       <View style={{ padding: 10, flex: 1 }}>
-        <View style = {styles.bottomRow}>
-          <TouchableOpacity 
-          style = {styles.bottomButton}
-          onPress={() => navigation.navigate("Explore")}>
-            <Text style = {styles.bottomButtonLabel}>Profile</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style = {styles.bottomButton}
-          onPress={() => navigation.navigate("Explore")}> 
-          {/* Navigate page should be updated later */}
-            <Text style = {styles.bottomButtonLabel}>Explore</Text>
-          </TouchableOpacity>
-        </View>
+        <BottomRow/>
       </View>
+
     </View>
   );
 }
