@@ -10,9 +10,9 @@ export default function App() {
   return (<NavigationContainer>
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen}/>
-      <Stack.Screen name="Explore" component={ExploreScreen} />
+      <Stack.Screen name="Explore" component={ExploreScreen}/>
       <Stack.Screen name="Profile" component={ProfileScreen}/>
-      <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen}/>
     </Stack.Navigator>
   </NavigationContainer>);
 }
