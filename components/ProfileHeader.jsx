@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import CheckInButton from "./CheckInButton";
+import {Image, StyleSheet, View} from "react-native";
 
 export default function ProfileHeader() {
 
