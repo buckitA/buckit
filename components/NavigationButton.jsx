@@ -1,15 +1,15 @@
 import {StyleSheet, Text, TouchableOpacity} from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
-export default function NavigationButton({buttonName}) {
+export default function NavigationButton({screenName}) {
     // To call useNavigation() directly to enable stack navigation for NavigationButton
     // source: https://reactnavigation.org/docs/connecting-navigation-prop/
     const navigation = useNavigation();
     
     return(
         // To use button to navigate, make sure the destination screen is named the same as the buttonName
-        <TouchableOpacity style = {styles.navButton} onPress={() => navigation.navigate(buttonName)}>
-                <Text style = {styles.navButtonLabel}>{buttonName}</Text>
+        <TouchableOpacity style = {styles.navButton} onPress={() => navigation.navigate(screenName)}>
+                <Text style = {styles.navButtonLabel}>{screenName}</Text>
         </TouchableOpacity>
     );
 }
