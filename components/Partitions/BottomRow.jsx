@@ -1,15 +1,33 @@
 import {StyleSheet, View} from "react-native";
 import NavigationButton from "../NavigationButton";
+import {useState} from "react";
 
-export default function BottomRow() {
+export default function BottomRow(props) {
+    const [navButtons, setNavButtons] = useState(["null", "null", "null"]);
+
+    const page = props.page;
+
+    if (navButtons[0] === "null") {
+        const otherPages = getOtherPages(page);
+        console.log(otherPages);
+        setNavButtons(otherPages);
+    }
+
     return(
         <View style={{ padding: 10, flex: 1 }}>
             <View style = {styles.bottomRow}>
-                <NavigationButton buttonName="Explore"/>
-                <NavigationButton buttonName="Profile"/>
+                <NavigationButton screenName={navButtons[0]}/>
+                <NavigationButton screenName={navButtons[1]}/>
+                <NavigationButton screenName={navButtons[2]}/>
             </View>
         </View>
     );
+}
+
+function getOtherPages(page) {
+    const pages = new Set(["Home", "Explore", "Settings", "Profile"]);
+    pages.delete(page)
+    return Array.from(pages);
 }
 
 const styles = StyleSheet.create({
