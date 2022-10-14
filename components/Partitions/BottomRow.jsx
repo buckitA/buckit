@@ -3,9 +3,11 @@ import NavigationButton from "../NavigationButton";
 
 export default function BottomRow() {
     return(
-        <View style = {styles.bottomRow}>
-            <NavigationButton/>
-            <NavigationButton/>
+        <View style={{ padding: 10, flex: 1 }}>
+            <View style = {styles.bottomRow}>
+                <NavigationButton/>
+                <NavigationButton/>
+            </View>
         </View>
     );
 }
