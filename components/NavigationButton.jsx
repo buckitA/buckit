@@ -1,9 +1,15 @@
 import {StyleSheet, Text, TouchableOpacity} from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
-export default function NavigationButton({navigation}) {
+export default function NavigationButton({buttonName}) {
+    // To call useNavigation() directly to enable stack navigation for NavigationButton
+    // source: https://reactnavigation.org/docs/connecting-navigation-prop/
+    const navigation = useNavigation();
+    
     return(
-        <TouchableOpacity style = {styles.navButton} onPress={() => navigation.navigate("Explore")}>
-                <Text style = {styles.navButtonLabel}>Profile</Text>
+        // To use button to navigate, make sure the destination screen is named the same as the buttonName
+        <TouchableOpacity style = {styles.navButton} onPress={() => navigation.navigate(buttonName)}>
+                <Text style = {styles.navButtonLabel}>{buttonName}</Text>
         </TouchableOpacity>
     );
 }
@@ -18,7 +24,7 @@ const styles = StyleSheet.create({
         marginHorizontal: "1%",
         marginBottom: 6,
         minWidth: "48%",
-        // textAlign: "center",  <- Causing error right now not sure why
+        textAlign: "center"
     },
     navButtonLabel: {
         fontSize: 12,

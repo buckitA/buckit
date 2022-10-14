@@ -5,8 +5,8 @@ export default function BottomRow() {
     return(
         <View style={{ padding: 10, flex: 1 }}>
             <View style = {styles.bottomRow}>
-                <NavigationButton/>
-                <NavigationButton/>
+                <NavigationButton buttonName="Explore"/>
+                <NavigationButton buttonName="Profile"/>
             </View>
         </View>
     );
@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
     },
     bottomRow: {
         flex: 3,
+        flexDirection: "row",
+        flexWrap: "wrap",
     },
     bottomButtonText: {
         fontSize: 30,

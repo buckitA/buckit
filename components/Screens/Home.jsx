@@ -4,7 +4,7 @@ import TopMidRow from "../Partitions/TopMidRow";
 import BottomMidRow from "../Partitions/BottomMidRow";
 import BottomRow from "../Partitions/BottomRow";
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen() {
     return (
         <View style={styles.screen}>
             <TopRow/>

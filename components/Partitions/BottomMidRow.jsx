@@ -5,7 +5,7 @@ import CheckInButton from "../CheckInButton";
 export default function BottomMidRow() {
     return(
         <View style={styles.bottomMidRow}>
-            <CheckInButton/>
+            <CheckInButton checkinButtonName={"Check In"}/>
         </View>
     );
 }

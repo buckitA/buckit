@@ -1,25 +1,9 @@
-import {StyleSheet, View} from "react-native";
-import TopRow from "../Partitions/TopRow";
-import TopMidRow from "../Partitions/TopMidRow";
-import BottomMidRow from "../Partitions/BottomMidRow";
-import BottomRow from "../Partitions/BottomRow";
+import {Text, View} from "react-native";
 
-export default function ProfileScreen({ navigation }) {
+export default function ExploreScreen() {
     return (
-        <View style={styles.screen}>
-            <TopRow/>
-            <TopMidRow/>
-            <BottomMidRow/>
-            <BottomRow/>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Profile</Text>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    screen: {
-        flex: 1,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
