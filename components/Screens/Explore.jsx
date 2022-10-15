@@ -12,7 +12,7 @@ export default function ExploreScreen() {
     return (
         <View style={styles.screen}>
             <TopRow/>
-            <TopMidRow/>
+            <TopMidRow page={route.name}/>
             <BottomMidRow/>
             <BottomRow page={route.name}/>
         </View>
