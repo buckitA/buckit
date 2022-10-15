@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         alignSelf: "flex-start",
         marginHorizontal: "1%",
         marginBottom: 6,
-        minWidth: "48%",
+        minWidth: "30%",
         textAlign: "center"
     },
     navButtonLabel: {
