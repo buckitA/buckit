@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 import {Image, StyleSheet, View} from "react-native";
+import capture from '../images/Capture.png';
 
 export default function ProfileHeader() {
 
     return(
         <View style={styles.imageBox}>
-            <Image source={images/Capture.PNG}/>
+            {/* Note the border radius should be in align with the caculation below */}
+            <Image source={capture} style={{width:130, height:130, borderRadius: 65}}/>
         </View>
     );
 }
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 200,
         borderColor: 'black',
-        borderWidth: 10,
-        backgroundColor: 'gray',
+        borderWidth: 10, // the radius for the inner circle should be 150/2 - 10 = 65
+        backgroundColor: '#fff',
     },
 });
