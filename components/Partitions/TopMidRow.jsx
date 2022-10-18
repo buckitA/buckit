@@ -6,11 +6,11 @@ export default function TopMidRow(props) {
 
     const page = props.page;
 
-    const exploreMiddleText = getMiddleTextForExplore(page);
+    const middleText = getMiddleText(page);
 
-    if(exploreMiddleText != null) {
+    if(middleText != null) {
         return(
-            <View style={styles.topMidRow}>{exploreMiddleText}</View>
+            <View style={styles.topMidRow}>{middleText}</View>
         );
     }
 
@@ -21,11 +21,11 @@ export default function TopMidRow(props) {
 
 const styles = StyleSheet.create({
     topMidRow: {
-        flex: 4,
+        flex: 2,
     },
 });
 
-function getMiddleTextForExplore(page) {
+function getMiddleText(page) {
     if(page === "Explore") return (<ExploreMiddleText/>);
     else return null;
 }

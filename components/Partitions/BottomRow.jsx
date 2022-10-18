@@ -31,14 +31,8 @@ function getOtherPages(page) {
 }
 
 const styles = StyleSheet.create({
-    screen: {
-        flex: 1,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     bottomRow: {
-        flex: 3,
+        flex: 1,
         flexDirection: "row",
         flexWrap: "wrap",
     },

@@ -11,29 +11,21 @@ export default function ExploreScreen() {
 
     return (
         <View style={styles.screen}>
-            <TopRow/>
+            <TopRow page={route.name}/>
             <TopMidRow page={route.name}/>
-            <BottomMidRow/>
+            <BottomMidRow page={route.name}/>
             <BottomRow page={route.name}/>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    topRow: {
-      flex: 3,
-      backgroundColor: 'gold',
+  screen: {
+      flex: 1,
+      backgroundColor: 'white',
       alignItems: 'center',
-      justifyContent: 'center',
-    },
-    buttonText: {
-      fontSize: 50,
-      fontWeight: 'bold',
-    },
-    screen: {
-        flex: 1,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-  });
+      justifyContent: "space-between",
+      backgroundColor: "#fff",
+      padding: 10,
+  },
+});

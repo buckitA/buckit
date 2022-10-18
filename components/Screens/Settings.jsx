@@ -3,14 +3,18 @@ import TopRow from "../Partitions/TopRow";
 import TopMidRow from "../Partitions/TopMidRow";
 import BottomMidRow from "../Partitions/BottomMidRow";
 import BottomRow from "../Partitions/BottomRow";
+import {useRoute} from "@react-navigation/native";
 
 export default function SettingsScreen({ navigation }) {
+    
+    const route = useRoute();
+
     return (
         <View style={styles.screen}>
-            <TopRow/>
-            <TopMidRow/>
-            <BottomMidRow/>
-            <BottomRow/>
+            <TopRow page={route.name}/>
+            <TopMidRow page={route.name}/>
+            <BottomMidRow page={route.name}/>
+            <BottomRow page={route.name}/>
         </View>
     );
 }
@@ -20,6 +24,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: "space-between",
+        backgroundColor: "#fff",
+        padding: 10,
     },
 });
