@@ -1,6 +1,7 @@
 import {StyleSheet, View, Text} from "react-native";
 import React from "react";
 import CheckInButton from "../CheckInButton";
+import ExploreBadgesRow from "../ExploreBadgesRow";
 
 export default function BottomMidRow(props) {
 
@@ -8,27 +9,32 @@ export default function BottomMidRow(props) {
 
     const middleText = getBottomMiddleText(page);
 
-    if(page === "Home") {
+    if(middleText != null) {
         return(
-            <View style={styles.bottomMidRow}>
-                <CheckInButton checkinButtonName={"Check In"}/>
-            </View>
+            middleText
         );
     }
 
     return(
         <View style={styles.bottomMidRow}>
-            <Text>PlaceHolder for other pages</Text>
+            <ExploreBadgesRow/>
+            <ExploreBadgesRow/>
+            <ExploreBadgesRow/>
         </View>);
 }
 
 const styles = StyleSheet.create({
     bottomMidRow: {
         flex: 10,
+        flexDirection: "row",
+        alignItems: 'center',
     },
 });
 
 function getBottomMiddleText(page) {
-    if(page === "Explore") return (<CheckInButton checkinButtonName={"Check In"}/>);
+    if(page === "Home") return (
+        <View style={styles.bottomMidRow}>
+            <CheckInButton checkinButtonName={"Check In"}/>
+        </View>);
     else return null;
 }

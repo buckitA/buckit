@@ -22,6 +22,7 @@ export default function TopMidRow(props) {
 const styles = StyleSheet.create({
     topMidRow: {
         flex: 2,
+        alignItems: 'center',
     },
 });
 

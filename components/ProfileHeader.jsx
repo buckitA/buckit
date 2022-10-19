@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         height: 150,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 200,
+        borderRadius: 75,
         borderColor: 'black',
         borderWidth: 10, // the radius for the inner circle should be 150/2 - 10 = 65
         backgroundColor: '#fff',

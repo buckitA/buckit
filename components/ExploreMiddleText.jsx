@@ -3,15 +3,16 @@ import {StyleSheet, Text, View} from "react-native";
 export default function ExploreMiddleText() {
 
     return(
-        <View style={styles.titleText}>
-            <Text>National Parks</Text>
+        <View>
+            <Text style={styles.titleText}>National Parks</Text>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     titleText: {
-        fontSize: 50,
+        fontSize: 40,
         fontWeight: 'bold',
+        alignItems: 'center',
       }
 });

@@ -29,7 +29,7 @@ export default function TopRow(props) {
 
 const styles = StyleSheet.create({
   topRowHome: {
-    flex: 3,
+    flex: 1,
     backgroundColor: 'gold',
     alignItems: 'center',
     justifyContent: 'center',
