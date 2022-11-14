@@ -1,31 +1,22 @@
 import React from "react";
-import {Image, StyleSheet, View} from "react-native";
-import capture from '../images/Capture.png';
+import {StyleSheet, Text, View} from "react-native";
+import ProfilePicture from "./ProfilePicture";
+import ProfileSummary from "./ProfileSummary";
 
 export default function ProfileHeader() {
 
     return(
-        <View style={styles.imageBox}>
-            {/* Note the border radius should be in align with the calculation below */}
-            <Image source={capture} style={styles.imageProper}/>
+        <View style={styles.profileContainer}>
+            <ProfilePicture/>
+            <ProfileSummary/>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    imageBox: {
-        width: 150,
-        height: 150,
-        justifyContent: 'center',
+    profileContainer: {
+        flex: 1,
         alignItems: 'center',
-        borderRadius: 75,
-        borderColor: 'black',
-        borderWidth: 10, // the radius for the inner circle should be 150/2 - 10 = 65
-        backgroundColor: '#fff',
+        justifyContent: 'space-evenly',
     },
-    imageProper: {
-        width:130,
-        height:130,
-        borderRadius: 65
-    }
 });
