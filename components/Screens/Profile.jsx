@@ -1,19 +1,30 @@
-import {StyleSheet, Text, View} from "react-native";
-import ProfileHeader from "../ProfileHeader";
+import {StyleSheet, View} from "react-native";
+import {useRoute} from "@react-navigation/native";
+import TopRow from "../Partitions/TopRow";
+import TopMidRow from "../Partitions/TopMidRow";
+import BottomMidRow from "../Partitions/BottomMidRow";
+import BottomRow from "../Partitions/BottomRow";
 
 export default function ProfileScreen() {
+
+    const route = useRoute();
+
     return (
-        <View style={styles.profileContainer}>
-            <Text>Profile</Text>
-            <ProfileHeader></ProfileHeader>
+        <View style={styles.screen}>
+            <TopRow page={route.name}/>
+            <TopMidRow page={route.name}/>
+            <BottomMidRow page={route.name}/>
+            <BottomRow page={route.name}/>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    profileContainer: {
+    screen: {
         flex: 1,
+        backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: "space-between",
+        padding: 10,
     },
 });
