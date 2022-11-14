@@ -1,6 +1,7 @@
 import {StyleSheet, View} from "react-native";
 import React from "react";
 import ExploreMiddleText from "../ExploreMiddleText";
+import ProfileHeader from "../ProfileHeader";
 
 export default function TopMidRow(props) {
 
@@ -28,5 +29,6 @@ const styles = StyleSheet.create({
 
 function getMiddleText(page) {
     if(page === "Explore") return (<ExploreMiddleText/>);
+    if(page === "Profile") return (<ProfileHeader/>);
     else return null;
 }
