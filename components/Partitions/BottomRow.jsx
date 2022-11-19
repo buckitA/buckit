@@ -7,6 +7,17 @@ export default function BottomRow(props) {
 
     const page = props.page;
 
+    if (page === "Collection") {
+        return(
+            <View style={{ padding: 10, flex: 1 }}>
+                <View style = {styles.bottomRow}>
+                    <NavigationButton screenName={"(Back) Explore"}/>
+                </View>
+            </View>
+        );
+    }
+
+
     if (navButtons[0] === "null") {
         const otherPages = getOtherPages(page);
         console.log(otherPages);
