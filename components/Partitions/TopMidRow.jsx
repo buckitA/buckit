@@ -2,6 +2,7 @@ import {StyleSheet, View} from "react-native";
 import React from "react";
 import ExploreMiddleText from "../ExploreMiddleText";
 import ProfileHeader from "../ProfileHeader";
+import TitleBanner from "../TitleBanner";
 
 export default function TopMidRow(props) {
 
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
 });
 
 function getMiddleText(page) {
+    if(page === "Home") return ( <TitleBanner/>);
     if(page === "Explore") return (<ExploreMiddleText/>);
     if(page === "Profile") return (<ProfileHeader/>);
     else return null;

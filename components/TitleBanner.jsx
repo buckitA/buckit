@@ -1,15 +1,15 @@
 import React from "react";
 import {Text, StyleSheet} from "react-native";
 
-export default function HomeBuckitText() {
+export default function TitleBanner() {
 
     return(
-        <Text style={styles.buttonText}>BuckIt</Text>
+        <Text style={styles.titleText}>BuckIt</Text>
     );
 }
 
 const styles = StyleSheet.create({
-    buttonText: {
+    titleText: {
       fontSize: 50,
       fontWeight: 'bold',
     }
