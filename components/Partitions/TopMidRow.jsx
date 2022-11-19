@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
 function getMiddleText(page) {
     if(page === "Home") return ( <TitleBanner/>);
     if(page === "Collection") return (<CollectionMiddleTitle collectionName={"National Parks"} />);
+    if(page === "Explore") return (<PinnedExploreBox/>);
     if(page === "Profile") return (<ProfileHeader/>);
     else return null;
 }
