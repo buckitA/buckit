@@ -11,7 +11,7 @@ export default function BottomRow(props) {
         return(
             <View style={{ padding: 10, flex: 1 }}>
                 <View style = {styles.bottomRow}>
-                    <NavigationButton screenName={"(Back) Explore"}/>
+                    <NavigationButton screenName={"Explore"}/>
                 </View>
             </View>
         );
