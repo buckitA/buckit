@@ -5,6 +5,7 @@ import HomeScreen from "./components/Screens/Home";
 import ExploreScreen from "./components/Screens/Explore";
 import ProfileScreen from "./components/Screens/Profile";
 import SettingsScreen from "./components/Screens/Settings";
+import CollectionScreen from "./components/Screens/Collection";
 
 export default function App() {
   return (<NavigationContainer>
