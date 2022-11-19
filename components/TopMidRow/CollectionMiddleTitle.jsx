@@ -1,10 +1,10 @@
 import {StyleSheet, Text, View} from "react-native";
 
-export default function ExploreMiddleText() {
+export default function CollectionMiddleTitle({collectionName}) {
 
     return(
         <View>
-            <Text style={styles.titleText}>National Parks</Text>
+            <Text style={styles.titleText}>{collectionName}</Text>
         </View>
     );
 }

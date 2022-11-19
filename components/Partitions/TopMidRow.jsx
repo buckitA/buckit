@@ -1,6 +1,6 @@
 import {StyleSheet, View} from "react-native";
 import React from "react";
-import ExploreMiddleText from "../ExploreMiddleText";
+import CollectionMiddleTitle from "../TopMidRow/CollectionMiddleTitle";
 import ProfileHeader from "../TopMidRow/ProfileHeader";
 import TitleBanner from "../TopRow/TitleBanner";
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 
 function getMiddleText(page) {
     if(page === "Home") return ( <TitleBanner/>);
-    if(page === "Explore") return (<ExploreMiddleText/>);
+    if(page === "Collection") return (<CollectionMiddleTitle collectionName={"National Parks"} />);
     if(page === "Profile") return (<ProfileHeader/>);
     else return null;
 }
