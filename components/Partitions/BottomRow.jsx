@@ -1,5 +1,5 @@
 import {StyleSheet, View} from "react-native";
-import NavigationButton from "../NavigationButton";
+import NavigationButton from "../BottomRow/NavigationButton";
 import {useState} from "react";
 
 export default function BottomRow(props) {

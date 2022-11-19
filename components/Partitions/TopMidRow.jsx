@@ -1,8 +1,8 @@
 import {StyleSheet, View} from "react-native";
 import React from "react";
 import ExploreMiddleText from "../ExploreMiddleText";
-import ProfileHeader from "../ProfileHeader";
-import TitleBanner from "../TitleBanner";
+import ProfileHeader from "../TopMidRow/ProfileHeader";
+import TitleBanner from "../TopRow/TitleBanner";
 
 export default function TopMidRow(props) {
 

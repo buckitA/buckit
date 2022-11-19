@@ -1,6 +1,6 @@
 import {StyleSheet, View, Text} from "react-native";
 import React from "react";
-import CheckInButton from "../CheckInButton";
+import CheckInButton from "../BottomMidRow/CheckInButton";
 import ExploreBadgesRow from "../ExploreBadgesRow";
 
 export default function BottomMidRow(props) {
