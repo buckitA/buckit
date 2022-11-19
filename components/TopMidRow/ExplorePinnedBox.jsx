@@ -2,7 +2,7 @@ import {StyleSheet, View} from "react-native";
 import React, {useState} from "react";
 import ExplorePorthole from "./ExplorePorthole";
 
-export default function PinnedExploreBox() {
+export default function ExplorePinnedBox() {
     const [pinnedExplore, setPinnedExplore] = useState([
         <ExplorePorthole collection={"National Parks"} />,
         <ExplorePorthole collection={"State Parks"} />,
