@@ -1,14 +1,15 @@
-import {StyleSheet, View} from "react-native";
+import {StyleSheet, Text, TouchableOpacity} from "react-native";
 import React from "react";
+import {useNavigation} from "@react-navigation/native";
 
 export default function ExplorePorthole({collection}) {
+    const navigation = useNavigation();
+
     return(
-        <View style={styles.porthole}>
-            {collection}
-        </View>
+        <TouchableOpacity style={styles.porthole} onPress={() => navigation.navigate("Collection")}>
+            <Text style={styles.buttonText}>{collection}</Text>
+        </TouchableOpacity>
     );
-
-
 }
 
 const styles = StyleSheet.create({
@@ -17,6 +18,7 @@ const styles = StyleSheet.create({
         minWidth: 100,
         maxWidth: 100,
         height: 100,
+        borderRadius: 40,
         justifyContent: "center",
         alignItems: "center",
 
@@ -25,5 +27,9 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(249, 180, 45, 0.25)",
         borderWidth: 1.5,
         borderColor: "#fff"
+    },
+    buttonText: {
+        fontSize: 10,
+        fontWeight: 'bold',
     },
 });
