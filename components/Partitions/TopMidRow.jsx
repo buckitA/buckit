@@ -3,16 +3,17 @@ import React from "react";
 import CollectionMiddleTitle from "../TopMidRow/CollectionMiddleTitle";
 import ProfileHeader from "../TopMidRow/ProfileHeader";
 import TitleBanner from "../TopRow/TitleBanner";
+import ExplorePinnedBox from "../TopMidRow/ExplorePinnedBox";
 
 export default function TopMidRow(props) {
 
     const page = props.page;
 
-    const middleText = getMiddleText(page);
+    const middleComponent = getMiddleComponent(page);
 
-    if(middleText != null) {
+    if(middleComponent != null) {
         return(
-            <View style={styles.topMidRow}>{middleText}</View>
+            <View style={styles.topMidRow}>{middleComponent}</View>
         );
     }
 
@@ -28,10 +29,10 @@ const styles = StyleSheet.create({
     },
 });
 
-function getMiddleText(page) {
-    if(page === "Home") return ( <TitleBanner/>);
-    if(page === "Collection") return (<CollectionMiddleTitle collectionName={"National Parks"} />);
-    if(page === "Explore") return (<PinnedExploreBox/>);
+function getMiddleComponent(page) {
+    if(page === "Home") return (<TitleBanner/>);
+    if(page === "Collection") return (<CollectionMiddleTitle collectionName={"National Parks"}/>);
+    if(page === "Explore") return (<ExplorePinnedBox/>);
     if(page === "Profile") return (<ProfileHeader/>);
     else return null;
 }
