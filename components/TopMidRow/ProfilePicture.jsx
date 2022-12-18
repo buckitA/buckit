@@ -1,6 +1,6 @@
 import React from "react";
 import {Image, StyleSheet, View} from "react-native";
-import capture from '../../images/Capture.PNG';
+import capture from '../../images/Capture.png';
 
 export default function ProfilePicture() {
 
