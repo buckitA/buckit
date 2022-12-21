@@ -17,9 +17,11 @@ export default function BottomMidRow(props) {
 
     return(
         <View style={styles.bottomMidRow}>
+            {/* <ExploreBadgesRow/>
             <ExploreBadgesRow/>
-            <ExploreBadgesRow/>
-            <ExploreBadgesRow/>
+            <ExploreBadgesRow/> */}
+            {/* Temporarily rermoved for further discussion, could use https://www.npmjs.com/package/react-native-infinite-scroll-view */}
+
         </View>);
 }
 

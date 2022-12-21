@@ -5,7 +5,8 @@ export default function ProfileInfoBox(props) {
 
     return(
         <View style={styles.infoBox}>
-            {props.payload}
+            {/* {props.payload} */}
+            {/* Temporarily disabled payload injection */}
         </View>
     );
 }
