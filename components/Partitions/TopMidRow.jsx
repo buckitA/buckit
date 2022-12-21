@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 });
 
 function getMiddleComponent(page) {
-    if(page === "Home") return (<TitleBanner/>);
+    // if(page === "Home") return (<TitleBanner/>); removed to use the default banner
     if(page === "Collection") return (<CollectionMiddleTitle collectionName={"National Parks"}/>);
     if(page === "Explore") return (<ExplorePinnedBox/>);
     if(page === "Profile") return (<ProfileHeader/>);
